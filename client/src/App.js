@@ -5,12 +5,7 @@ import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./home/home";
 import io from "socket.io-client";
-const socket = io("https://localhost:5050", {
-  withCredentials: true,
-  extraHeaders: {
-    "my-custom-header": "abcd",
-  },
-});
+const socket = io("https://kenta-realtime-chat.herokuapp.com");
 
 function Appmain(props) {
   return (

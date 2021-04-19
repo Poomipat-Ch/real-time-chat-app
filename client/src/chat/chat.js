@@ -26,8 +26,9 @@ function Chat({ username, roomname, socket }) {
         username: data.username,
         text: ans,
       });
-      setMessages([...temp]);
+      setMessages(...temp);
     });
+    // eslint-disable-next-line
   }, [socket]);
 
   const sendData = () => {

@@ -57,7 +57,7 @@ function Chat({ username, roomname, socket }) {
       </div>
       <div className="chat-message">
         {messages.map((i) => {
-          if (i.username === username) {
+          if (i.username !== username) {
             return (
               <div className="message">
                 <p>{i.text}</p>

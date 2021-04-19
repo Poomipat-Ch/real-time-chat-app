@@ -10,15 +10,12 @@ const socket = io("https://kenta-realtime-chat.herokuapp.com");
 function Appmain(props) {
   return (
     <React.Fragment>
-      <div className="right">
+      <div className="center">
         <Chat
           username={props.match.params.username}
           roomname={props.match.params.roomname}
           socket={socket}
         />
-      </div>
-      <div className="left">
-        <Process />
       </div>
     </React.Fragment>
   );

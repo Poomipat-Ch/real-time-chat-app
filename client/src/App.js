@@ -1,6 +1,5 @@
 import React from "react";
 import Chat from "./chat/chat";
-import Process from "./process/process";
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./home/home";

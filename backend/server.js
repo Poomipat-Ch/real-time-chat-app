@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
 const socket = require("socket.io");
+const cors = require("cors");
 require("colors");
 const { userJoin, getCurrentUser, userLeave } = require("./dummyuser");
+
+app.use(cors());
 
 const server = app.listen(process.env.PORT || 5050, () => {
   console.log(
@@ -12,7 +15,14 @@ const server = app.listen(process.env.PORT || 5050, () => {
   );
 });
 
-const io = socket(server);
+const io = socket(server, {
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true,
+  },
+});
 
 io.on("connection", (socket) => {
   //when new user join room

@@ -1,0 +1,50 @@
+@import "../globals";
+.process {
+  width: 500px;
+  min-height: 550px;
+  margin-right: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2rem;
+  h5 {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.4);
+    span {
+      color: yellow;
+    }
+  }
+  .incomming {
+    width: 100%;
+    h4 {
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 300;
+    }
+    p {
+      margin-top: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1.2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .crypt {
+    width: 100%;
+    h4 {
+      color: rgba(255, 255, 255, 0.4);
+      font-weight: 300;
+    }
+    p {
+      margin-top: 0.5rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1.2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+  }
+}
